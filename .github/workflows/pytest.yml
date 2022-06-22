@@ -1,0 +1,12 @@
+name: Unit Tests
+on: [push]
+jobs: 
+  Run_Pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3 # Make repo available
+      - name: We would like to install pytest
+        run: pip install pytest
+      - name: Excecute pytest as module
+        run: python -m pytest -vv
+    
